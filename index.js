@@ -4,23 +4,11 @@ import walker from './lib/walker'
 import type { Codegen } from './lib/types'
 import PhpAdapter from './lib/codegen/php'
 
-export function compile (template: string, adapter: Codegen) {
+export function compile (name: string, template: string, adapter: Codegen) {
   const ast = handlebarsX.parse(template)
-  return walker(ast, adapter)
+  return walker(name, ast, adapter)
 }
 
-const test = '<span class="address-container-line"> \
-					<p class="address-container-city" name="city"> \
-						{{city}} \
-					</p> \
-					{{#if showState}} \
-						<p class="address-container-state" name="state"> \
-							{{state}} \
-						</p> \
-            <br test="1" test32="10" /> \
-					{{/if}} \
-					<p class="address-container-zip" name="zip"> \
-						{{zip}} \
-					</p> \
-				</span>'
-console.log(compile(test, PhpAdapter))
+export function compileToPhp (name: string, template: string) {
+  return compile(name, template, PhpAdapter)
+}

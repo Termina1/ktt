@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "handlebars-ex": "0.0.2"
+    "handlebars-ex": "git+https://github.com/Chaptykov/handlebars-ex.git"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
