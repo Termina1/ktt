@@ -20,7 +20,7 @@
     "babel-preset-flow": "^6.23.0",
     "handlebars-ex": "git+https://github.com/Chaptykov/handlebars-ex.git"
   },
-  "devDependencies": {
+  "optionalDependencies": {
     "babel-eslint": "^7.2.3",
     "babel-plugin-transform-es2015-block-scoping": "^6.24.1",
     "eslint": "^3.19.0",
