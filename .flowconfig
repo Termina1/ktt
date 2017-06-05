@@ -1,0 +1,9 @@
+[ignore]
+
+[include]
+index.js
+node_modules/handlebars-ex
+
+[libs]
+
+[options]
