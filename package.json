@@ -6,20 +6,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "flow": "flow",
-    "postinstall": "babel --presets es2015 --presets flow -d dist/ lib"
+    "prepublish": "babel --no-babelrc --presets=flow,es2015 --plugins=transform-es2015-modules-commonjs,syntax-object-rest-spread,transform-object-rest-spread,transform-es2015-constants,transform-es2015-block-scoping -d dist/ lib"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-plugin-syntax-object-rest-spread": "^6.13.0",
-    "babel-plugin-transform-es2015-constants": "^6.1.4",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
-    "babel-plugin-transform-object-rest-spread": "^6.23.0",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-flow": "^6.23.0",
-    "handlebars-ex": "git+https://github.com/Chaptykov/handlebars-ex.git",
-    "babel-plugin-transform-es2015-block-scoping": "^6.24.1"
+    "handlebars-ex-partials": "0.0.2"
   },
   "optionalDependencies": {
     "babel-eslint": "^7.2.3",
@@ -29,6 +21,14 @@
     "eslint-plugin-node": "^5.0.0",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
-    "flow-bin": "^0.47.0"
+    "flow-bin": "^0.47.0",
+    "babel-cli": "^6.24.1",
+    "babel-plugin-syntax-object-rest-spread": "^6.13.0",
+    "babel-plugin-transform-es2015-constants": "^6.1.4",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-flow": "^6.23.0",
+    "babel-plugin-transform-es2015-block-scoping": "^6.24.1"
   }
 }
