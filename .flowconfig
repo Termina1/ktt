@@ -3,6 +3,7 @@
 [include]
 index.js
 node_modules/handlebars-ex
+spec
 
 [libs]
 
