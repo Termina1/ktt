@@ -185,23 +185,23 @@ describe('Simple Handlebars Attributes', () => {
 
     describe('single statements', () => {
       describe('Safe evaluation', () => {
-        // it('Should recognize a simple safe evaluation', () => {
-        //   const result = compile('<div {{evaluateMe}}> </div>')
-        //   const expected = wrapTopLevel(['<div ', unWrap(`hbarsEscape($params['evaluateMe'])`), '/>'])
-        //   expect(result).toEqual(expected)
-        // })
-        //
-        // it('Should recognize a simple safe evaluation with spaces', () => {
-        //   const result = compile('<article {{ evaluateMe  }}></article>')
-        //   const expected = wrapTopLevel(['<article ', unWrap(`hbarsEscape($params['evaluateMe'])`), '/>'])
-        //   expect(result).toEqual(expected)
-        // })
-        //
-        // it('Should recognize a simple safe evaluation with dots', () => {
-        //   const result = compile('<input {{evaluate.Me.again}} />')
-        //   const expected = wrapTopLevel(['<input ', unWrap(`hbarsEscape($params['evaluate']['Me']['again'])`), '/>'])
-        //   expect(result).toEqual(expected)
-        // })
+        it('Should recognize a simple safe evaluation', () => {
+          const result = compile('<div {{evaluateMe}}> </div>')
+          const expected = wrapTopLevel(['<div ', unWrap(`hbarsEscape($params['evaluateMe'])`), '/>'])
+          expect(result).toEqual(expected)
+        })
+
+        it('Should recognize a simple safe evaluation with spaces', () => {
+          const result = compile('<article {{ evaluateMe  }}></article>')
+          const expected = wrapTopLevel(['<article ', unWrap(`hbarsEscape($params['evaluateMe'])`), '/>'])
+          expect(result).toEqual(expected)
+        })
+
+        it('Should recognize a simple safe evaluation with dots', () => {
+          const result = compile('<input {{evaluate.Me.again}} />')
+          const expected = wrapTopLevel(['<input ', unWrap(`hbarsEscape($params['evaluate']['Me']['again'])`), '/>'])
+          expect(result).toEqual(expected)
+        })
       })
 
       describe('Unsafe evaluation', () => {

@@ -1,5 +1,5 @@
 const DEFAUL_TPL_NAME = 'test'
-const { compileToPhp } = require('../dist/index')
+const { compileToPhp } = require('../lib/index')
 
 function wrap (result) {
   return result.map(el => typeof el === 'object' ? el.el : `'${el}'`)

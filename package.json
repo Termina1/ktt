@@ -4,7 +4,8 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "test": "jasmine",
+    "test": "babel-node spec/support/run.js",
+    "test-watch": "babel-watch spec/support/run.js",
     "flow": "flow",
     "prepublish": "babel --no-babelrc --presets=flow,es2015 --plugins=transform-es2015-modules-commonjs,syntax-object-rest-spread,transform-object-rest-spread,transform-es2015-constants,transform-es2015-block-scoping -d dist/ lib"
   },
@@ -32,6 +33,7 @@
     "babel-plugin-transform-es2015-block-scoping": "^6.24.1"
   },
   "devDependencies": {
+    "babel-watch": "^2.0.7",
     "jasmine": "^2.8.0"
   }
 }
